@@ -1,0 +1,8 @@
+services:
+  mediacleaner:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - TAUTULLI_BASE_URL=${TAUTULLI_BASE_URL}
+      - TAUTULLI_API_KEY=${TAUTULLI_API_KEY}
