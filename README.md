@@ -43,6 +43,8 @@ cp .env.example .env
 ```
 
 ```
+API_KEY=your-long-random-api-key
+
 TAUTULLI_BASE_URL=http://your-tautulli-url
 TAUTULLI_API_KEY=your-api-key
 ```
@@ -51,6 +53,12 @@ TAUTULLI_API_KEY=your-api-key
 
 ```bash
 mvn spring-boot:run
+```
+### Docker
+
+Included is a docker compose script that uses a automatically prebuilt ghcr image
+```bash
+docker compose up -d
 ```
 
 ### Testing
@@ -62,6 +70,8 @@ mvn test
 ---
 
 ## API
+
+All requests require an **Api-Key** to be present in the request. Set the api key using the `.env`
 
 ### GET /recommendations
 
